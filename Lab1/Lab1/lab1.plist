@@ -1,0 +1,55 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>plastic</key>
+		<string>Polyethylene Terephthalate</string>
+		<key>use</key>
+		<array>
+			<string>Soda Bottles</string>
+			<string>Water bottles</string>
+			<string>Medicine jars</string>
+			<string>Combs</string>
+			<string>Bean Bags</string>
+		</array>
+	</dict>
+	<dict>
+		<key>plastic</key>
+		<string>High-Density Polyethylene</string>
+		<key>use</key>
+		<array>
+			<string>Mile Jugs</string>
+			<string>Juice Containers</string>
+			<string>Grocery Bags</string>
+			<string>Shampoo Bottles</string>
+			<string>Toys</string>
+		</array>
+	</dict>
+		<dict>
+		<key>plastic</key>
+		<string>Styrofoam</string>
+		<key>use</key>
+		<array>
+			<string>Coffee Cups</string>
+			<string>Food Boxes</string>
+			<string>Plastic Cutlery</string>
+			<string>Packing Foam</string>
+			<string>Packing Peanuts</string>
+		</array>
+	</dict>
+		<dict>
+		<key>plastic</key>
+		<string>Polypropylene</string>
+		<key>use</key>
+		<array>
+			<string>Diapers</string>
+			<string>Tupperware</string>
+			<string>Stadium Cups</string>
+			<string>Bottle Caps</string>
+			<string>Perscription Bottles</string>
+		</array>
+	</dict>
+</array>
+</plist>

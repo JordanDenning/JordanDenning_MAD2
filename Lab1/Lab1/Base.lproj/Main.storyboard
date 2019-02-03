@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Plastics-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-7P-NNo">
+                                <rect key="frame" x="16" y="329" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-NF-nVO">
+                                <rect key="frame" x="47" y="78" width="0.0" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="Qfz-6U-v96"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Zh2-VP-ZgS"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EbH-NF-nVO" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="34" id="2cO-8q-YwE"/>
+                            <constraint firstItem="EbH-NF-nVO" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="7At-bP-zrQ"/>
+                            <constraint firstItem="2lg-7P-NNo" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="CNK-eJ-d8v"/>
+                            <constraint firstItem="2lg-7P-NNo" firstAttribute="top" secondItem="EbH-NF-nVO" secondAttribute="bottom" constant="35" id="NiG-no-3up"/>
+                            <constraint firstItem="EbH-NF-nVO" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="dAn-jx-wwa"/>
+                            <constraint firstItem="2lg-7P-NNo" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="mUd-88-U7J"/>
+                            <constraint firstItem="2lg-7P-NNo" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="oRr-NW-im0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Plastics" image="bottle" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="choiceLabel" destination="2lg-7P-NNo" id="New-yi-Vgh"/>
+                        <outlet property="dependentPicker" destination="EbH-NF-nVO" id="bGG-Qh-3uI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.5" y="-322.5"/>
+        </scene>
+        <!--Do it-->
+        <scene sceneID="fmM-Hx-Jyc">
+            <objects>
+                <viewController id="HQX-nh-fD6" customClass="ThirdViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFV-q9-zfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi3-nE-zcv">
+                                <rect key="frame" x="141" y="113" width="132" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="I recycled!">
+                                    <color key="titleColor" red="0.056704286200000002" green="0.8228829339" blue="0.066610134139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recycleButton:" destination="HQX-nh-fD6" eventType="touchUpInside" id="SiU-CY-lAZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOh-6x-2ND">
+                                <rect key="frame" x="114.5" y="248" width="185" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="I didn't recycle">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.046545039429999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="trashButton:" destination="HQX-nh-fD6" eventType="touchUpInside" id="b2a-as-Xt1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oOh-6x-2ND" firstAttribute="top" secondItem="hi3-nE-zcv" secondAttribute="bottom" constant="87" id="3Pz-UZ-T5F"/>
+                            <constraint firstItem="hi3-nE-zcv" firstAttribute="centerX" secondItem="AFV-q9-zfd" secondAttribute="centerX" id="JxT-0W-Gvo"/>
+                            <constraint firstItem="oOh-6x-2ND" firstAttribute="centerX" secondItem="AFV-q9-zfd" secondAttribute="centerX" id="aq9-SK-gG9"/>
+                            <constraint firstItem="oOh-6x-2ND" firstAttribute="centerX" secondItem="AFV-q9-zfd" secondAttribute="centerX" id="c2V-qM-6qd"/>
+                            <constraint firstItem="hi3-nE-zcv" firstAttribute="centerX" secondItem="AFV-q9-zfd" secondAttribute="centerX" id="hgF-Yo-Upb"/>
+                            <constraint firstItem="hi3-nE-zcv" firstAttribute="top" secondItem="ihn-O8-DJL" secondAttribute="top" constant="69" id="hov-j6-lkH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ihn-O8-DJL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Do it" image="check" id="aOs-dX-5jE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdn-a5-gXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.25" y="840"/>
+        </scene>
+        <!--Recycle-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can I recycle this?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaH-eU-bB7">
+                                <rect key="frame" x="109.5" y="100" width="195.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbF-mo-NNy">
+                                <rect key="frame" x="156" y="228" width="102" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Recycle">
+                                    <color key="titleColor" red="0.056704286200000002" green="0.8228829339" blue="0.066610134139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotorecycle:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ITj-9H-OaZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gaH-eU-bB7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="56" id="Nau-An-8P6"/>
+                            <constraint firstItem="gaH-eU-bB7" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="aA8-rQ-X41"/>
+                            <constraint firstItem="YbF-mo-NNy" firstAttribute="top" secondItem="gaH-eU-bB7" secondAttribute="bottom" constant="98" id="nIO-zj-NYT"/>
+                            <constraint firstItem="YbF-mo-NNy" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="rzp-OD-PsS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recycle" image="recycle" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="398"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                        <color key="selectedImageTintColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="HQX-nh-fD6" kind="relationship" relationship="viewControllers" id="GzM-BI-xDY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottle" width="8" height="25"/>
+        <image name="check" width="33" height="25"/>
+        <image name="recycle" width="25" height="25"/>
+    </resources>
+</document>
