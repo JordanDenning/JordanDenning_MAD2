@@ -1,0 +1,78 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>team</key>
+		<string>US Women's National Team</string>
+		<key>player</key>
+		<array>
+			<string>Alex Morgan</string>
+			<string>Mal Pugh</string>
+			<string>Carli Lloyd</string>
+			<string>Christen Press</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>Denver Broncos</string>
+		<key>player</key>
+		<array>
+			<string>Phillip Lindsay</string>
+			<string>Von Miller</string>
+			<string>Case Keenum</string>
+		</array>
+	</dict>
+		<dict>
+		<key>team</key>
+		<string>Denver Nuggets</string>
+		<key>player</key>
+		<array>
+			<string>Isaiah Thomas</string>
+			<string>Jamal Murray</string>
+		</array>
+	</dict>
+		<dict>
+		<key>team</key>
+		<string>Colorado Avalanche</string>
+		<key>player</key>
+		<array>
+			<string>Nathan Mackinnon</string>
+			<string>Gabriel Landeskog</string>
+			<string>Semyon Varlamov</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>US Men's National Team</string>
+		<key>player</key>
+		<array>
+			<string>Timothy Weah</string>
+			<string>Christian Pulisic</string>
+			<string>Josh Sargent</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>US Men's Snowboard Team Halfpipe</string>
+		<key>player</key>
+		<array>
+			<string>Chase Josey</string>
+			<string>Jake Pates</string>
+			<string>Ryan Wachendorfer</string>
+			<string>Toby Miller</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>US Women's Snowboard Team Halfpipe</string>
+		<key>player</key>
+		<array>
+			<string>Chloe Kim</string>
+			<string>Arielle Gold</string>
+			<string>Kelly Clarke</string>
+		</array>
+	</dict>
+</array>
+</plist>
