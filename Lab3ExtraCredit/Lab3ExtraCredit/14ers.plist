@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Mt. Elbert</string>
+			<key>elevation</key>
+			<string>14,433</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Elbert</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mt. Massive</string>
+			<key>elevation</key>
+			<string>14,421</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Massive</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mt. Harvard</string>
+			<key>elevation</key>
+			<string>14,420</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Harvard</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mt. Evans</string>
+			<key>elevation</key>
+			<string>14,264</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Evans</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mt. Princeton</string>
+			<key>elevation</key>
+			<string>14,197</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Princeton</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mt. Belford</string>
+			<key>elevation</key>
+			<string>14,433</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Belford</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mt. Yale</string>
+			<key>elevation</key>
+			<string>14,433</string>
+			<key>url</key>
+			<string>https://www.14ers.com/photos/peakmain.php?peak=Mt.+Yale</string>
+		</dict>
+	</array>
+</plist>
