@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab6</string>
+    <string name="dogs">Dogs</string>
+    <string name="dog_image">Dog</string>
+    <string name="donate_money">Donate</string>
+    <string name="action_settings">Settings</string>
+    <string name="donation">Please Consider Donating!</string>
+    <string name="amount">Donation Amount</string>
+</resources>
