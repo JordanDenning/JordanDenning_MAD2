@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">ProjectTwo</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_fav">Favorites</string>
+    <string name="search_wine">Search Wines</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="search_button">Search</string>
+    <string-array name="wineTypes">
+        <item>Red</item>
+        <item>White</item>
+        <item>Rose</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_specific_wine">SpecificWineActivity</string>
+    <string name="wineLabel">Wine</string>
+    <string name="regionLabel">Region</string>
+    <string name="priceLabel">Price</string>
+    <string name="varietalLabel">Varietal</string>
+    <string name="vintageLabel">Vintage</string>
+    <string name="wineryLabel">Winery</string>
+    <string-array name="redWineList">
+        <item>Cabernet Sauvignon</item>
+        <item>Malbec</item>
+        <item>Merlot</item>
+        <item>Pinot Noir</item>
+        <item>Sangiovese</item>
+        <item>Shiraz</item>
+        <item>Zinfandel</item>
+        <item>Barbera</item>
+    </string-array>
+    <string-array name="whiteWineList">
+        <item>Chenin Blanc</item>
+        <item>Pinot Grigio</item>
+        <item>Riesling</item>
+        <item>Sauvignon Blanc</item>
+        <item>Chardonnay</item>
+        <item>Gewurztraminer</item>
+        <item>Muscat</item>
+        <item>Semillon</item>
+    </string-array>
+    <string-array name="roseWineList">
+        <item>Grenache</item>
+        <item>Syrah</item>
+        <item>Tempranillo</item>
+        <item>Pinot Noir</item>
+        <item>Tavel</item>
+        <item>Sangiovese</item>
+        <item>White Zinfandel</item>
+    </string-array>
+</resources>
