@@ -51,14 +51,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder vholder, int position){
         vholder.textView.setText(values.get(position).name);
-        vholder.textView.setBackgroundColor(Color.RED);
+        vholder.textView.setBackgroundColor(Color.parseColor("#c62828"));
         vholder.textView.setTextColor(Color.BLACK);
 
     }
 
     @Override
     public  int getItemCount(){
-        return values.size();
+        if (values!=null) {
+            return values.size();
+        }
+        else {
+            return 0;
+        }
     }
 
     public interface ListItemClickListener{

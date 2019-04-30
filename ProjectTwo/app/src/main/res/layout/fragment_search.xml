@@ -15,12 +15,12 @@
         android:id="@+id/mstb_multi_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="8dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         mstb:mstbPrimaryColor="@color/colorPrimary"
         mstb:mstbSecondaryColor="@color/button_secondary_color"
         mstb:values="@array/wineTypes" />
@@ -30,8 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:onClick="searchWines"
+        android:onClick="onClick"
         android:text="@string/search_button"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -39,10 +40,44 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:dropDownWidth="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
-        mstb:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintTop_toBottomOf="@+id/mstb_multi_id"
+        mstb:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="61dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/redwine"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/redwine" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="61dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/whitewine"
+        app:layout_constraintTop_toTopOf="parent"
+        mstb:layout_constraintEnd_toEndOf="parent"
+        mstb:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="61dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/rosewine"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

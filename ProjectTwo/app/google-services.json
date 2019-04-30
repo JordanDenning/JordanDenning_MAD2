@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "86378901135",
+    "firebase_url": "https://finewine-15878.firebaseio.com",
+    "project_id": "finewine-15878",
+    "storage_bucket": "finewine-15878.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86378901135:android:af910bf4e6378600",
+        "android_client_info": {
+          "package_name": "com.example.projecttwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86378901135-pvlmgdmjpe2ucth32gla9sc320hmft5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLC08Lx5_8xNZZKj0bB2cOgUi8oQ-xM0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86378901135-pvlmgdmjpe2ucth32gla9sc320hmft5f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "86378901135-aadq3fgesk8vm7sl8nedgos3k9eppopi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "JKD.ProjectFinal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 //                    mTextMessage.setText(R.string.title_fav);
                     toolbar.setTitle(R.string.title_fav);
                     fragment = new FavoritesFragment();
+                    Log.d("going to favorites", "going to favs");
                     loadFragment(fragment);
                     return true;
             }
@@ -57,12 +59,19 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.search_wine);
+        if(savedInstanceState == null){
+            loadFragment(new SearchFragment());
+        }
+
+
 //        toolbar.setTitle(R.string.title_fav);
-        loadFragment(new SearchFragment());
+
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+
 
 }

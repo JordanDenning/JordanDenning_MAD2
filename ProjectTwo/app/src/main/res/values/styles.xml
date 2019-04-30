@@ -12,6 +12,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+<!--https://medium.com/livefront/how-to-change-the-toolbar-font-on-android-b1ba87e7e29d-->
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/josefin_sans_bold</item>
     </style>
 
     <style name="CustomeTheme.NoActionBar">

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alegreya_sc</item>
+        <item>@font/alegreya_sc_black_italic</item>
+        <item>@font/courgette</item>
+        <item>@font/josefin_sans_bold</item>
+    </array>
+</resources>

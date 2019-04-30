@@ -1,12 +1,10 @@
 package com.example.projecttwo;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +28,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,6 +61,11 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(view.getContext(),
                 R.array.redWineList, android.R.layout.simple_spinner_item);
         MultiStateToggleButton button = (MultiStateToggleButton) view.findViewById(R.id.mstb_multi_id);
+        boolean butState[] = new boolean[3]; //set the initial state of the toggle button so red is selected
+        butState[0] = true;
+        butState[1] = false;
+        butState[2] = false;
+        button.setStates(butState);
         button.setOnValueChangedListener(new ToggleButton.OnValueChangedListener() {
             @Override
             public void onValueChanged(int position) {
@@ -180,7 +182,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         try {
             JSONObject object = (JSONObject) new JSONTokener(response).nextValue();
             JSONArray winearray = object.getJSONArray("wines");
-            JSONObject hi= winearray.getJSONObject(0);
+//            JSONObject hi= winearray.getJSONObject(0);
             for(int i = 0; i < winearray.length(); i++){
                 JSONObject wineArray = winearray.getJSONObject(i);
                 String name = wineArray.getString("name");
@@ -190,10 +192,49 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
                 }
 
                 String vintage = wineArray.getString("vintage");
+                if(vintage.equals("")){
+                    vintage = "Vintage Not Available";
+                }
                 String varietal = wineArray.getString("varietal");
+                if(varietal.equals("")){
+                    varietal = "Varietal Not Available";
+                }
+                else {
+                    String[] varietalArr = varietal.split(";");
+                    int k = 1;
+                    varietal = varietalArr[0];
+                    while (k < varietalArr.length){
+                        varietal += "," + varietalArr[k];
+
+                        k+=1;
+
+                    }
+                }
+
                 String region = wineArray.getString("region");
+                if(region.equals("")){
+                    region = "Region Not Available";
+                }
+                else{
+                    String[] regionArr = region.split(" > ");
+                    //print(regionArr)
+                    int j = regionArr.length-2;
+                    region = regionArr[j+1];
+                    while (j >= 0) {
+                        String place = regionArr[j];
+                        region += ", " + place;
+                        j-= 1;
+
+                    }
+                }
                 String price = wineArray.getString("price");
+                if(price.equals("")){
+                    price = "Price Not Available";
+                }
                 String winery = wineArray.getString("winery");
+                if(winery.equals("")){
+                    winery = "Winery Not Available";
+                }
                 WineData newWine = new WineData(name, region,price, winery, varietal, vintage);
                 wineData.add(newWine);
 //                Log.d("myTag", newWine.name);
