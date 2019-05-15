@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tWo-2C-b3F">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Wines-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-5P-4eu">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EDL-Oc-4Dp">
+                                        <rect key="frame" x="15" y="153" width="288" height="29"/>
+                                        <segments>
+                                            <segment title="Red"/>
+                                            <segment title="White"/>
+                                            <segment title="Rose"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="switchWine:" destination="BYZ-38-t0r" eventType="valueChanged" id="nq6-TF-0nh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6UD-Op-UBy">
+                                        <rect key="frame" x="16.5" y="8" width="287" height="128"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redwine" translatesAutoresizingMaskIntoConstraints="NO" id="KJV-iD-9et">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="LMD-Wj-UXY"/>
+                                                    <constraint firstAttribute="width" constant="91" id="dY7-w6-COC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whitewine" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-cV-DKw">
+                                                <rect key="frame" x="98" y="0.0" width="91" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="EZl-Hu-YyD"/>
+                                                    <constraint firstAttribute="width" constant="91" id="Sib-yy-qCv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="oIx-yM-ixw">
+                                                <rect key="frame" x="196" y="0.0" width="91" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="91" id="SMa-Iq-jXC"/>
+                                                    <constraint firstAttribute="height" constant="128" id="q4o-rQ-1XQ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmD-9V-oo8">
+                                        <rect key="frame" x="0.0" y="199" width="320" height="106"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="106" id="x19-c6-p2t"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORN-qR-6Yk">
+                                        <rect key="frame" x="122" y="338" width="76" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tns-Fl-3W7" kind="show" identifier="showWines" id="hKY-QU-AaG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ORN-qR-6Yk" secondAttribute="bottom" constant="75" id="0zl-fJ-ZQB"/>
+                                    <constraint firstAttribute="trailing" secondItem="JmD-9V-oo8" secondAttribute="trailing" id="321-is-BV1"/>
+                                    <constraint firstItem="EDL-Oc-4Dp" firstAttribute="top" secondItem="6UD-Op-UBy" secondAttribute="bottom" constant="17" id="5tf-lG-eR9"/>
+                                    <constraint firstItem="JmD-9V-oo8" firstAttribute="top" secondItem="EDL-Oc-4Dp" secondAttribute="bottom" constant="18" id="6JL-hj-n0E"/>
+                                    <constraint firstItem="6UD-Op-UBy" firstAttribute="centerX" secondItem="JmD-9V-oo8" secondAttribute="centerX" id="J49-og-Vwc"/>
+                                    <constraint firstItem="JmD-9V-oo8" firstAttribute="leading" secondItem="r2V-5P-4eu" secondAttribute="leading" id="RTR-Tm-pfG"/>
+                                    <constraint firstItem="6UD-Op-UBy" firstAttribute="centerX" secondItem="r2V-5P-4eu" secondAttribute="centerX" id="Wot-DG-MZI"/>
+                                    <constraint firstItem="6UD-Op-UBy" firstAttribute="top" secondItem="r2V-5P-4eu" secondAttribute="topMargin" id="Ytz-Vo-AYB"/>
+                                    <constraint firstItem="JmD-9V-oo8" firstAttribute="centerX" secondItem="ORN-qR-6Yk" secondAttribute="centerX" id="c4n-Y0-mql"/>
+                                    <constraint firstItem="EDL-Oc-4Dp" firstAttribute="leading" secondItem="r2V-5P-4eu" secondAttribute="leading" constant="15" id="gQF-w5-UiG"/>
+                                    <constraint firstAttribute="trailing" secondItem="EDL-Oc-4Dp" secondAttribute="trailing" constant="17" id="hsG-X3-USs"/>
+                                    <constraint firstItem="ORN-qR-6Yk" firstAttribute="top" secondItem="JmD-9V-oo8" secondAttribute="bottom" constant="33" id="i2o-2l-Pqa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="455"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
+                                        <rect key="value" x="0.0" y="0.0" width="320" height="568"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r2V-5P-4eu" secondAttribute="trailing" id="Cur-AK-aKu"/>
+                            <constraint firstItem="r2V-5P-4eu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D1j-xx-2NL"/>
+                            <constraint firstItem="r2V-5P-4eu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GJe-wr-92U"/>
+                            <constraint firstItem="r2V-5P-4eu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yAw-0O-P00"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Wines" id="ql9-pB-MgA"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="winePicker" destination="JmD-9V-oo8" id="9wC-iV-UWW"/>
+                        <outlet property="wineSegment" destination="EDL-Oc-4Dp" id="qOw-b3-DU0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4831.875" y="132.04225352112675"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="hqi-9s-nTa">
+            <objects>
+                <collectionViewController id="dia-6L-jbl" customClass="FavCollectionViewController" customModule="ProjectFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GVS-2l-lX2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xv0-BN-CFj">
+                            <size key="itemSize" width="180" height="90"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="9wj-2E-ixS" customClass="FavCollectionViewCell" customModule="ProjectFinal" customModuleProvider="target">
+                                <rect key="frame" x="70" y="0.0" width="180" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jI-Q4-acw">
+                                            <rect key="frame" x="6" y="28" width="168" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9jI-Q4-acw" firstAttribute="top" secondItem="9wj-2E-ixS" secondAttribute="topMargin" id="evk-fd-fnR"/>
+                                    <constraint firstItem="9jI-Q4-acw" firstAttribute="leading" secondItem="9wj-2E-ixS" secondAttribute="leadingMargin" constant="-2" id="fHP-e2-R7D"/>
+                                    <constraint firstItem="9jI-Q4-acw" firstAttribute="centerY" secondItem="9wj-2E-ixS" secondAttribute="centerY" id="lAE-0E-wmB"/>
+                                    <constraint firstItem="9jI-Q4-acw" firstAttribute="centerX" secondItem="9wj-2E-ixS" secondAttribute="centerX" id="nlg-du-BAk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="favLabel" destination="9jI-Q4-acw" id="1Do-d3-D4d"/>
+                                    <segue destination="qmB-ON-fjf" kind="show" identifier="showFavDetail" id="AD8-Pc-QjN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dia-6L-jbl" id="6lF-FU-b96"/>
+                            <outlet property="delegate" destination="dia-6L-jbl" id="lrR-oW-FZo"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Favorites" id="Bv1-u2-2y0"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3X-Jq-6Tz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4080.8000000000002" y="919.79010494752629"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="LUE-nD-49I">
+            <objects>
+                <viewController id="qmB-ON-fjf" customClass="FavDetailViewController" customModule="ProjectFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnC-jn-Egu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7J7-Dj-yNz">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="05n-45-wBS">
+                                        <rect key="frame" x="16" y="24" width="288" height="397.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-OI-5MJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3Y-ax-GMe">
+                                                        <rect key="frame" x="115.5" y="0.0" width="57" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NL-c8-D5j">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="i9c-iw-qjl"/>
+                                                            <constraint firstAttribute="width" constant="288" id="ny3-vB-Cet"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R92-fj-GGD">
+                                                <rect key="frame" x="0.0" y="83.5" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winery:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-66-ERe">
+                                                        <rect key="frame" x="110.5" y="0.0" width="67" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwM-dv-uMP">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="2xR-yv-mY0"/>
+                                                            <constraint firstAttribute="width" constant="288" id="bBf-ky-gK8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CJk-r6-rj0">
+                                                <rect key="frame" x="0.0" y="167" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Varietal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iu-l0-H69">
+                                                        <rect key="frame" x="105" y="0.0" width="78" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Varietal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkl-II-eWP">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="3KM-om-dNW"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="K0V-7N-ALd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-Bc-zDX">
+                                                <rect key="frame" x="0.0" y="250.5" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="row-d2-fVg">
+                                                        <rect key="frame" x="119.5" y="0.0" width="49" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ko-xT-lK2">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="PG1-FU-Uue"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Rhk-2i-eYh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-En-K74">
+                                                <rect key="frame" x="0.0" y="334" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vintage:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUo-U9-X6F">
+                                                        <rect key="frame" x="109" y="0.0" width="70.5" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vintage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3N-Ns-Di5">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="S5B-Cs-WZ5"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="g5e-Ue-ugO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="05n-45-wBS" firstAttribute="centerX" secondItem="7J7-Dj-yNz" secondAttribute="centerX" id="QfT-Af-2Ze"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="455"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
+                                        <rect key="value" x="0.0" y="0.0" width="320" height="568"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7J7-Dj-yNz" firstAttribute="trailing" secondItem="Pzt-iU-CkF" secondAttribute="trailing" id="DGW-cM-4R9"/>
+                            <constraint firstItem="05n-45-wBS" firstAttribute="leading" secondItem="Pzt-iU-CkF" secondAttribute="leading" constant="16" id="P1g-Px-brV"/>
+                            <constraint firstItem="7J7-Dj-yNz" firstAttribute="bottom" secondItem="Pzt-iU-CkF" secondAttribute="bottom" id="gzk-5y-Cb9"/>
+                            <constraint firstItem="7J7-Dj-yNz" firstAttribute="leading" secondItem="Pzt-iU-CkF" secondAttribute="leading" id="tXP-ib-zZ5"/>
+                            <constraint firstItem="7J7-Dj-yNz" firstAttribute="top" secondItem="Pzt-iU-CkF" secondAttribute="top" id="u7K-xl-K2h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pzt-iU-CkF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="6SU-Ka-ubW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="VQC-Nz-fN3">
+                            <connections>
+                                <action selector="deleteFav:" destination="qmB-ON-fjf" id="kRO-LZ-7tc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="priceLabel" destination="5ko-xT-lK2" id="fp5-xT-W3u"/>
+                        <outlet property="regionLabel" destination="3NL-c8-D5j" id="8No-gB-g6B"/>
+                        <outlet property="varietalLabel" destination="Nkl-II-eWP" id="cw8-ih-gZt"/>
+                        <outlet property="vintageLabel" destination="r3N-Ns-Di5" id="FYP-Ds-sd4"/>
+                        <outlet property="wineryLabel" destination="DwM-dv-uMP" id="Lxb-Ar-3a5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MtY-sa-N9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4831.875" y="919.0140845070423"/>
+        </scene>
+        <!--Wines-->
+        <scene sceneID="bch-lV-ECb">
+            <objects>
+                <collectionViewController id="tns-Fl-3W7" customClass="CollectionViewController" customModule="ProjectFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0Px-v4-GQY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.046545039429999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cwy-Qb-2M8">
+                            <size key="itemSize" width="180" height="108"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="XPL-HT-anh" customClass="CollectionViewCell" customModule="ProjectFinal" customModuleProvider="target">
+                                <rect key="frame" x="70" y="0.0" width="180" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-As-ab0">
+                                            <rect key="frame" x="6" y="28" width="168" height="52"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Label">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="20" name="Cochin"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="4" height="-1"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CF4-As-ab0" firstAttribute="centerY" secondItem="XPL-HT-anh" secondAttribute="centerY" id="Lbo-FP-aOm"/>
+                                    <constraint firstItem="CF4-As-ab0" firstAttribute="leading" secondItem="XPL-HT-anh" secondAttribute="leadingMargin" constant="-2" id="PeG-VY-UMd"/>
+                                    <constraint firstItem="CF4-As-ab0" firstAttribute="top" secondItem="XPL-HT-anh" secondAttribute="topMargin" id="RLk-ZU-vIz"/>
+                                    <constraint firstItem="CF4-As-ab0" firstAttribute="centerX" secondItem="XPL-HT-anh" secondAttribute="centerX" id="xaY-wf-gCu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="wineNameLabel" destination="CF4-As-ab0" id="OoW-6e-Zgp"/>
+                                    <segue destination="goU-u0-xJY" kind="show" identifier="showDetail" id="Yem-tF-BHi"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tns-Fl-3W7" id="PQS-nR-qLT"/>
+                            <outlet property="delegate" destination="tns-Fl-3W7" id="eQU-9y-Zcb"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Wines" id="FMt-Vp-niV"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01f-fR-Y1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6252" y="131.78410794602701"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="wZY-rA-dbd">
+            <objects>
+                <viewController id="goU-u0-xJY" customClass="DetailViewController" customModule="ProjectFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="leS-bW-rdm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVm-Fn-YDw">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EwB-gE-H3W">
+                                        <rect key="frame" x="16" y="28" width="288" height="397.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GMI-Tm-8a2">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region:" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh0-dM-NPf">
+                                                        <rect key="frame" x="90.5" y="0.0" width="107" height="25.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="2nW-xo-fKP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrO-lL-Lxi">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="58e-1m-4Fe"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9uF-uO-l0p"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W22-dZ-tLU">
+                                                <rect key="frame" x="0.0" y="83.5" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winery:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySJ-kB-Zuj">
+                                                        <rect key="frame" x="110.5" y="0.0" width="67" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGR-Gd-RtJ">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="DdY-wO-Yg2"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="c63-PH-SN7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Zd-ZH-JZs">
+                                                <rect key="frame" x="0.0" y="167" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Varietal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmy-hx-AOz">
+                                                        <rect key="frame" x="90.5" y="0.0" width="107" height="25.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="Tkj-3l-TmO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Varietal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-Pw-EFP">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="EjJ-sm-DCa"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="P0x-Fc-ttU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z2q-LJ-I0t">
+                                                <rect key="frame" x="0.0" y="250.5" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM9-LE-nyR">
+                                                        <rect key="frame" x="119.5" y="0.0" width="49" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euf-BO-uyk">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="288" id="L9V-3j-vG3"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bqj-mU-YLo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sv2-YV-Dan">
+                                                <rect key="frame" x="0.0" y="334" width="288" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vintage:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-xv-DOb">
+                                                        <rect key="frame" x="90.5" y="0.0" width="107" height="25.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="EAS-Ki-JFj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vintage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGg-TP-Fwt">
+                                                        <rect key="frame" x="0.0" y="33.5" width="288" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="CkJ-7S-yG6"/>
+                                                            <constraint firstAttribute="width" constant="288" id="aqD-ni-W3e"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EwB-gE-H3W" firstAttribute="centerX" secondItem="bVm-Fn-YDw" secondAttribute="centerX" id="mcT-9w-B0o"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="455"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
+                                        <rect key="value" x="0.0" y="0.0" width="320" height="568"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EwB-gE-H3W" firstAttribute="leading" secondItem="QWm-22-tnl" secondAttribute="leading" constant="16" id="Fbh-E6-V9N"/>
+                            <constraint firstItem="bVm-Fn-YDw" firstAttribute="trailing" secondItem="QWm-22-tnl" secondAttribute="trailing" id="Mex-Li-UJA"/>
+                            <constraint firstItem="bVm-Fn-YDw" firstAttribute="bottom" secondItem="QWm-22-tnl" secondAttribute="bottom" id="ZP9-Xi-3pY"/>
+                            <constraint firstItem="bVm-Fn-YDw" firstAttribute="top" secondItem="QWm-22-tnl" secondAttribute="top" id="byU-mA-Uf8"/>
+                            <constraint firstItem="bVm-Fn-YDw" firstAttribute="leading" secondItem="QWm-22-tnl" secondAttribute="leading" id="mGS-hH-oQF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QWm-22-tnl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" leftItemsSupplementBackButton="YES" id="hoy-JD-i83">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="star2" largeContentSizeImage="star2" id="4uK-E0-x8A">
+                            <color key="tintColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="favorite:" destination="goU-u0-xJY" id="e5a-E6-tj4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="priceLabel" destination="euf-BO-uyk" id="oh1-uQ-Y6c"/>
+                        <outlet property="regionLabel" destination="GrO-lL-Lxi" id="NFN-xC-aGV"/>
+                        <outlet property="varietalLabel" destination="Pj9-Pw-EFP" id="chc-y3-LKP"/>
+                        <outlet property="vintageLabel" destination="xGg-TP-Fwt" id="NkB-sL-q5M"/>
+                        <outlet property="wineryLabel" destination="UGR-Gd-RtJ" id="Uea-s7-Daw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eeb-gq-WRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7027.5" y="130.98591549295776"/>
+        </scene>
+        <!--Seach-->
+        <scene sceneID="wbb-7N-O1K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yH7-a4-6wf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Seach" image="search" selectedImage="search" id="Jzl-JZ-le6">
+                        <color key="badgeColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fXs-dB-DIg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mOp-ws-8aT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvd-Fl-qRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4082" y="134"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cZV-YV-ymN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tWo-2C-b3F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="NMb-Qe-aZK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yH7-a4-6wf" kind="relationship" relationship="viewControllers" id="Mfg-x9-yXh"/>
+                        <segue destination="JMe-ES-1Tn" kind="relationship" relationship="viewControllers" id="chZ-1n-35m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDI-g3-gYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3250" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BAQ-oO-PAl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zx7-lM-Ztr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U4O-H3-ELw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tns-Fl-3W7" kind="relationship" relationship="rootViewController" id="Mpp-SE-oZL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3F-3h-AUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5545" y="134"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="2mX-Iy-7XH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JMe-ES-1Tn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star2" selectedImage="star2fill" id="ghA-Aa-iQJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Ouv-EX-Iew">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dia-6L-jbl" kind="relationship" relationship="rootViewController" id="fYU-Tg-9BX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNl-dI-JBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3249" y="921"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="redwine" width="209" height="395"/>
+        <image name="rose" width="209" height="395"/>
+        <image name="search" width="30" height="30"/>
+        <image name="star2" width="30" height="29"/>
+        <image name="star2fill" width="30" height="29"/>
+        <image name="whitewine" width="209" height="395"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mpp-SE-oZL"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.73792517189999995" green="0.0012238763740000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
